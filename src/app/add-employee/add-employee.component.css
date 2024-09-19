@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+.example-card {
+  max-width: 800px;
+  border: none;
+  
+}
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .empform{
+  
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+    margin-left: 500px;
+    
+  }
+  .header 
+    {
+      background-color:#e0e0ff;
+      color:green;
+      font-weight: bolder;
+      align-content: center;
+  }

@@ -1,0 +1,56 @@
+<!-- <mat-card class="example-card empform"appearance="outlined"> -->
+  <mat-card-header class="header">
+     
+    <mat-card-title style="align-content: space-evenly;">Employee Registration Form</mat-card-title>
+  
+  </mat-card-header>
+<form [formGroup]="employeeForm" (ngSubmit)="onRegister()">
+    <div >
+    <div class="mb-8 ">
+      <label for="empName" class="form-label">Employee Name</label>
+      <input mat-Input type="empName" placeholder="Enter Your Name"  formControlName ="empName"  class ="form-control" id="empName" >
+      
+    </div>
+    <div class="mb-8 ">
+      <label for="empId" class="form-label">Employee ID</label>
+      <input type="text"placeholder="Enter Employee id" formControlName= "empId" class ="form-control" id="empId">
+    </div>
+    <div class="mb-8 ">
+        <label for="empExp" class="form-label">Experience </label>
+        <input type="text" placeholder="Enter experience in Month" formControlName= "experience"class ="form-control" id="exp">
+      </div>
+    <p></p>
+    <button type="submit" style="margin-left: 10px;" class="btn btn-primary" [disabled]="!employeeForm.valid" >Register</button>
+    <button type="button" style="margin-left: 10px;" class="btn btn-primary " [disabled]="!employeeForm.valid" (click)="resetForm()">Reset</button>
+    </div>
+
+
+
+  </form>
+
+ 
+ @if(isRegistered){
+<div class="container-sm">
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header class="text-info bg-dark">
+     
+      <mat-card-title>Employee Information</mat-card-title>
+    
+    </mat-card-header>
+    
+    <mat-card-content>
+      <p></p>
+      <p>Employee Name :{{newEmployee.empName}}</p>
+      <p>Employee Id:{{newEmployee.empId}}</p>
+      <p>Employee Experience:{{newEmployee.experience}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="navigateToUpdate()">Update</button>
+      <button mat-button (click)="navigateToDelete()" data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+  </div>
+}
+  
+
+ 
